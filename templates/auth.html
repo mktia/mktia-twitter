@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>twitterapp by mktia</title>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+body{
+	font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
+	animation: fadeIn 3s ease 0s 1 normal;
+    -webkit-animation: fadeIn 3s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+a{
+	text-decoration: none;
+}
+.button{
+	display: block;
+	width: 150px;
+	margin: auto;
+	padding: 10px 0 10px;
+	text-align: center;
+	border: 2px solid #ccc;
+	border-color: #eee #ccc #ccc #eee;
+}
+.contents{
+	text-align: center;
+}
+.title{
+	margin: 40px 0 20px;
+}
+</style>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="contents">
+		<h1 class="title">twitterapp ver.0 by mktia</h1>
+		<p>※ beta 版のため仮称です。</p>
+		<br>
+		<h2>使い方</h2>
+		<p>twitter アカウントで OAuth 認証を行います.</p>
+		<p>認証が済んだら機能を選択します.</p>
+		<br>
+		<a class="button" href="{{redirect_url}}">OAuth</a>
+		<br>
+		<br>
+		<h2>注意</h2>
+		<p>このアプリケーションは個人の趣味の延長上にあるものです.</p>
+		<p>使用によりいかなる損害が発生した場合でも責任は負いかねます.</p>
+		<br>
+		<p>開発：<a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
+		<br>
+		<p>不具合があったら気が向いたときに教えてください.</p>
+		<p>余力があれば修正するかもしれません.</p>
+	</div>
+</body>
+</html>

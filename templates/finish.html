@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>result</title>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+body{
+	font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
+	animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+.contents{
+	margin: 40px 0 0;
+	text-align: center;
+}
+</style>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="contents">
+		{% if type == 1 %}
+		<p>相互フォローチェックの処理が終わりました.</p>
+		<p>kataomoiリストを作成したので確認してください.</p>
+		{% else %}
+		<p>処理に失敗したかもしれません.</p>
+		{% endif %}
+	</div>
+</body>
+</html>

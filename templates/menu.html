@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>menu</title>
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+body{
+	font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
+	animation: fadeIn 2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+a{
+	text-decoration: none;
+}
+h2{
+	margin: 40px 0 0;
+}
+.button{
+	display: block;
+	width: 200px;
+	margin: auto;
+	padding: 10px 0 10px;
+	text-align: center;
+	border: 2px solid #ccc;
+	border-color: #eee #ccc #ccc #eee;
+}
+.contents{
+	text-align: center;
+}
+#warning{
+	color: #ff0000;
+}
+</style>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="contents">
+		<h1>機能選択</h1>
+		<p>利用したい機能を選択してください.</p>
+		<br>
+		<a class="button" href="http://localhost:5000/ffcheck">相互フォローチェック</a>
+		<br>
+		<p>※現在、相互フォローチェック以外の機能は使えません.</p>
+		<br>
+		<h2 id="warning">禁則事項（必ずお読みください）</h2>
+		<p>一日に何度も実行しないでください.</p>
+		<p>事前にテストを行ってはいますが、このプログラムは beta 版です.</p>
+		<p>何が起こるかわかりません.</p>
+		<p>実行回数によっては API を使いすぎてあなたのアカウントが凍結する可能性もあります.</p>
+		<p>また、処理が重くなりすぎると Heroku サーバが落ちるかもしれません.</p>
+	</div>
+</body>
+</html>
