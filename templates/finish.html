@@ -5,6 +5,7 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
 <title>result</title>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
@@ -41,10 +42,11 @@ body{
 <body>
 	<div class="contents">
 		{% if type == 1 %}
-		<p>相互フォローチェックの処理が終わりました.</p>
-		<p>kataomoi リストを作成したので twitter 上で確認してください.</p>
+		<p>相互フォローをチェックしました.</p>
+		<p>kataomoi リストを作成しました.</p>
+		<p>twitter 上で確認してください.</p>
 		<br>
-		<p style="color: #ff0000;">※再び利用するときは kataomoi リストを消去するか、リスト名を変更して実行してください.</p>
+		<p style="color: #ff0000;">※次回実行する際は kataomoi リストを消去するか、リスト名を変更してください.</p>
 		{% else %}
 		<p>処理に失敗したかもしれません.</p>
 		{% endif %}

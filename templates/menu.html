@@ -5,6 +5,7 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
 <title>menu</title>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
@@ -28,6 +29,11 @@ a{
 h2{
 	margin: 40px 0 0;
 }
+.box{
+	margin: 20px auto;
+	text-align: left;
+	border: 1px solid #bbb;
+}
 .button{
 	display: block;
 	width: 200px;
@@ -42,6 +48,11 @@ h2{
 }
 #warning{
 	color: #ff0000;
+}
+@media all and (min-width: 920px){
+	.box{
+		width: 600px;
+	}
 }
 </style>
 <script>
@@ -61,17 +72,23 @@ h2{
 		<p>利用したい機能を選択してください.</p>
 		<br>
 		<a class="button" href="http://mktia-twitter.herokuapp.com/ffcheck">相互フォローチェック</a>	
+		<br>
 		<h2>相互フォローチェックに関する注意</h2>
-		<p>API 制限により、一度に取得できる片思いアカウントの数は 180 が限界です.</p>
-		<p>kataomoi という名のリストがないことを確認して進んでください.</p>
+		<div class="box">
+			<ol>
+				<li>一度に取得できる片思いアカウントの数は API 制限により 180 が限界です.</li>
+				<li>kataomoi という名のリストがないことを確認して進んでください.</li>
+			</ol>
+		</div>
 		<p>※現在、相互フォローチェック以外の機能は使えません.</p>
 		<br>
-		<h2 id="warning">禁則事項（必ずお読みください）</h2>
+		<h2>禁則事項</h2>
+		<p id="warning">※必ずお読みください</p>
 		<p>一日に何度も実行しないでください.</p>
-		<p>事前にテストを行ってはいますが、このプログラムは beta 版です.</p>
-		<p>何が起こるかわかりません.</p>
-		<p>実行回数によっては API を使いすぎてあなたのアカウントが凍結する可能性もあります.</p>
-		<p>また、処理が重くなりすぎると Heroku サーバが落ちるかもしれません.</p>
+		<p>このプログラムは beta 版です.</p>
+		<p>事前にテストしていますが、何が起こるかわかりません.</p>
+		<p>実行回数によっては API を使いすぎて、アカウントが凍結する可能性もあります.</p>
+		<p>処理が重くなりすぎると Heroku サーバが落ちるかもしれません.</p>
 	</div>
 </body>
 </html>
