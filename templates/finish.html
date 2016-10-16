@@ -23,6 +23,24 @@ body{
     0% {opacity: 0}
     100% {opacity: 1}
 }
+a{
+	text-decoration: none;
+}
+footer{
+	margin: 60px 0 0;
+}
+header{
+	margin: 40px 0 20px;
+}
+.button{
+	display: block;
+	width: 200px;
+	margin: auto;
+	padding: 10px 0 10px;
+	text-align: center;
+	border: 2px solid #ccc;
+	border-color: #eee #ccc #ccc #eee;
+}
 .contents{
 	margin: 40px 0 0;
 	text-align: center;
@@ -41,15 +59,49 @@ body{
 </head>
 <body>
 	<div class="contents">
+		<header>
+			<h1>実行結果</h1>
+		</header>
 		{% if type == 1 %}
-		<p>相互フォローをチェックしました.</p>
+		<p>片思いしているアカウントをチェックしました.</p>
+		<br>
 		<p>kataomoi リストを作成しました.</p>
 		<p>twitter 上で確認してください.</p>
 		<br>
 		<p style="color: #ff0000;">※次回実行する際は kataomoi リストを消去するか、リスト名を変更してください.</p>
+		<br>
+		<br>
+		<a class="button" href="{{url}}/">TOP に戻る</a>
+		<br>
+		{% elif type == 2 %}
+		<p>片思いされているアカウントをチェックしました.</p>
+		<br>
+		<p>notfollow リストを作成しました.</p>
+		<p>twitter 上で確認してください.</p>
+		<br>
+		<p style="color: #ff0000;">※次回実行する際は notfollow リストを消去するか、リスト名を変更してください.</p>
+		<br>
+		<br>
+		<a class="button" href="{{url}}/">TOP に戻る</a>
+		<br>
+		{% elif type == 3 %}
+		<p>定期ツイートが多いアカウントをチェックしました.</p>
+		<br>
+		<p>teiki リストを作成しました.</p>
+		<p>twitter 上で確認してください.</p>
+		<br>
+		<p style="color: #ff0000;">※次回実行する際は teiki リストを消去するか、リスト名を変更してください.</p>
+		<br>
+		<br>
+		<a class="button" href="{{url}}/">TOP に戻る</a>
+		<br>
 		{% else %}
 		<p>処理に失敗したかもしれません.</p>
 		{% endif %}
+		<footer>
+			<p><a href="{{url}}/">TOP</a> | <a href="{{url}}/ver">バージョン情報</a> | Developed by <a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
+			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All Rights Reserved.</p>
+		</footer>
 	</div>
 </body>
 </html>

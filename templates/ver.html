@@ -6,7 +6,7 @@
 <![endif]-->
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1">
-<title>menu</title>
+<title>version</title>
 <style>
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 @import url('https://fonts.googleapis.com/css?family=Raleway:300');
@@ -26,36 +26,38 @@ body{
 a{
 	text-decoration: none;
 }
+.info p{
+	margin: 10px 0;
+}
 footer{
 	margin: 60px 0 0;
 }
 header{
 	margin: 40px 0 20px;
 }
-.box{
-	margin: 20px auto;
-	text-align: left;
-	border: 1px solid #bbb;
-}
 .button{
 	display: block;
 	width: 200px;
-	margin: 10px auto;
+	margin: auto;
 	padding: 10px 0 10px;
 	text-align: center;
 	border: 2px solid #ccc;
 	border-color: #eee #ccc #ccc #eee;
 }
 .contents{
+	margin: 40px 0 0;
 	text-align: center;
 }
-#warning{
-	color: #ff0000;
+.info{
+	margin: 20px auto 80px;
 }
-@media all and (min-width: 920px){
-	.box{
-		width: 600px;
-	}
+.left{
+	padding-right: 5px;
+	text-align: right;
+}
+.right{
+	padding-left: 5px;
+	text-align: left;
 }
 </style>
 <script>
@@ -72,42 +74,20 @@ header{
 <body>
 	<div class="contents">
 		<header>
-			<h1>機能選択</h1>
+			<h1>バージョン情報</h1>
 		</header>
-		<br>
-		<a class="button" href="{{url}}/ffcheck">片思いチェック</a>
-		<a class="button" href="{{url}}/notfollow">片思われチェック</a>
-		<!--/teiki-->
-		<p class="button" style="color: #ccc;">定期ツイートチェック</p>
-		<br>
-		<p>※定期ツイートチェックは利用できません.</p>
-		<br>
-		<br>
-		<h2>各種機能</h2>
-		<h3>片思いチェック</h3>
-		<p>片思いしているアカウントのリスト kataomoi を作成します.</p>
-		<br>
-		<h3>片思われチェック</h3>
-		<p>片思いされているアカウントのリスト notfollow を作成します.</p>
-		<p>※鍵アカウントはチェックの対象外です.</p>
-		<br>
-		<br>
-		<br>
-		<div class="box">
-		<h2 style="text-align: center;">使用上の注意</h2>
-			<ol>
-				<li>一度にリストに追加できるアカウントの数は API 制限により 180 が限界ですが、安全のため 150 に設定しています.</li>
-				<li>以前作成されたリストが存在すると正常に動作しないことがあります.</li>
-			</ol>
+		<div class="info">
+			<table bgcolor="#fff" align="center">
+				<tr>
+					<td class="left">2016/10/16 ver.0.1</td>
+					<td class="right">片思い・片思われチェック機能公開</td>
+				</tr>
+				<tr>
+					<td class="left">2016/10/14 ver.0</td>
+					<td class="right">相互フォローチェック機能公開</td>
+				</tr>
+			</table>
 		</div>
-		<br>
-		<br>
-		<br>
-		<h2 id="warning">禁則事項</h2>
-		<p>一日に何度も実行しないでください.</p>
-		<p>このプログラムは beta 版です.</p>
-		<p>事前にテストしていますが、何が起こるかわかりません.</p>
-		<p>実行回数によっては API を使いすぎて、アカウントが凍結する可能性もあります.</p>
 		<footer>
 			<p><a href="{{url}}/">TOP</a> | <a href="{{url}}/ver">バージョン情報</a> | Developed by <a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
 			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All Rights Reserved.</p>

@@ -26,6 +26,12 @@ body{
 a{
 	text-decoration: none;
 }
+footer{
+	margin: 60px 0 0;
+}
+header{
+	margin: 40px 0 20px;
+}
 .button{
 	display: block;
 	width: 200px;
@@ -39,7 +45,7 @@ a{
 	text-align: center;
 }
 .title{
-	margin: 40px 0 20px;
+	margin: 0 0 20px;
 }
 </style>
 <script>
@@ -51,28 +57,34 @@ a{
   ga('create', 'UA-60167522-20', 'auto');
   ga('send', 'pageview');
 
+
 </script>
 </head>
 <body>
 	<div class="contents">
-		<h1 class="title">twitterapp ver.0 by mktia</h1>
-		<p>※ beta 版のため仮称です。</p>
+		<header>
+			<h1 class="title">twitterapp ver.0 by mktia</h1>
+			<p>※ beta 版のため仮称</p>
+		</header>
 		<br>
 		<h2>使い方</h2>
-		<p>twitter アカウントの認証を行います.</p>
-		<p>認証後のメニューで機能を選択できます.</p>
+		<p>各チェックに引っかかったアカウントをリストにまとめることができるアプリケーションです.</p>
+		<p>最初に twitter アカウントの認証が必要です.</p>
 		<br>
 		<a class="button" href="{{redirect_url}}">OAuth</a>
+		<br>
 		<br>
 		<br>
 		<h2>注意</h2>
 		<p>このアプリケーションは個人の趣味の延長上にあるものです.</p>
 		<p>使用によりいかなる損害が発生した場合でも責任は負いかねます.</p>
 		<br>
-		<p>開発：<a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
-		<br>
 		<p>不具合があったら気が向いたときに教えてください.</p>
 		<p>余力があれば修正するかもしれません.</p>
+		<footer>
+			<p><a href="{{url}}/">TOP</a> | <a href="{{url}}/ver">バージョン情報</a> | Developed by <a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
+			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All Rights Reserved.</p>
+		</footer>
 	</div>
 </body>
 </html>
