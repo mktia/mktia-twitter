@@ -178,6 +178,35 @@ def teikicheck():
 			
 	return render_template('finish.html', type=3)
 """
+"""
+@app.route('/mute-teiki')
+def mute_teiki():
+	token = session.get('request_token')
+	verifier = session.get('verifier')
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_url)
+	auth.request_token = token
+	auth.get_access_token(verifier)
+	access_token = auth.access_token
+	access_token_secret = auth.access_token_secret
+	auth.set_access_token(access_token, access_token_secret)
+	api = tweepy.API(auth)
+	
+	friends = []
+	for friend in tweepy.Cursor(api.friends_ids).items():
+		friends.append(friend)
+	
+	mute = []
+	cnt = 0
+	
+	tl = api.home_timeline()
+	for line in tl:
+		text = line.text
+		user = line.user.id
+		print user
+		if text.find(u'定期') >= 0:
+			#mute
+	return render_template('finish.html', url=url, type=4)
+"""
 	
 @app.route('/ver')
 def show_ver():
