@@ -106,38 +106,20 @@
 		</header>
 		<section>
 			{% if type == 1 %}
-			<p>片思いしているアカウントをチェックしました。</p>
-			<br>
-			<p>kataomoi リストを作成しました。</p>
+			<p>あなたが片思いしているアカウントをチェックしました。</p>
+			<p>kataomoi リストを自動生成しました。</p>
 			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
-			<br>
-			<p style="color: #ff0000;">※次回実行する際は kataomoi リストを消去するか、リスト名を変更してください.</p>
-			<br>
-			<br>
 			<a class="button" href="{{url}}/">TOP に戻る</a>
-			<br>
 			{% elif type == 2 %}
-			<p>片思いされているアカウントをチェックしました。</p>
-			<br>
-			<p>notfollow リストを作成しました。</p>
+			<p>あなたに片思いしているアカウントをチェックしました。</p>
+			<p>notfollow リストを自動生成しました。</p>
 			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
-			<br>
-			<p style="color: #ff0000;">※次回実行する際は notfollow リストを消去するか、リスト名を変更してください.</p>
-			<br>
-			<br>
 			<a class="button" href="{{url}}/">TOP に戻る</a>
-			<br>
 			{% elif type == 3 %}
 			<p>定期ツイートが多いアカウントをチェックしました。</p>
-			<br>
-			<p>teiki リストを作成しました。</p>
+			<p>teiki リストを自動生成しました。</p>
 			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
-			<br>
-			<p style="color: #ff0000;">※次回実行する際は teiki リストを消去するか、リスト名を変更してください.</p>
-			<br>
-			<br>
 			<a class="button" href="{{url}}/">TOP に戻る</a>
-			<br>
 			{% else %}
 			<p>処理に失敗したかもしれません.</p>
 			{% endif %}
