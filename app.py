@@ -57,7 +57,7 @@ def ffcheck():
 	fr = len(friends)
 	fo = len(followers)
 	
-	owner_id = api.me()
+	owner = api.me()
 	owner_id = owner.id
 	owner_screen_name = owner.screen_name
 	try:
