@@ -57,8 +57,14 @@ def ffcheck():
 	fr = len(friends)
 	fo = len(followers)
 	
-	owner_id = api.me().id
-	api.create_list(name='kataomoi', mode='private', description="You follow this list members, but they don't follow you.")
+	owner_id = api.me()
+	owner_id = owner.id
+	owner_screen_name = owner.screen_name
+	try:
+		api.destroy_list(owner_id=owner_id, slug='kataomoi')
+	except Exception as e:
+		print(e)
+	api.create_list(name='kataomoi', mode='private', description="あなたが片思いしているユーザー一覧です")
 	
 	not_friends = []
 	cnt = 0
@@ -79,7 +85,8 @@ def ffcheck():
 		else:
 			break
 	
-	return render_template('finish.html', url=url, type=1)
+	api.update_status(u'片思いリストを作成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	return render_template('finish.html', url=url, user=owner_screen_name, type=1)
 
 @app.route('/notfollow')
 def notfollow():
@@ -100,8 +107,14 @@ def notfollow():
 	for follower in tweepy.Cursor(api.followers_ids).items():
 		followers.append(follower)
 	
-	owner_id = api.me().id
-	api.create_list(name='notfollow', mode='private', description="This list members follow you, but you don't follow him.")
+	owner = api.me()
+	owner_id = owner.id
+	owner_screen_name = owner.screen_name
+	try:
+		api.destroy_list(owner_id=owner_id, slug='notfollow')
+	except Exception as e:
+		print(e)
+	api.create_list(name='notfollow', mode='private', description=u"あなたに片思いしているユーザー一覧です")
 	
 	not_follow = []
 	cnt = 0
@@ -122,7 +135,8 @@ def notfollow():
 		else:
 			break
 	
-	return render_template('finish.html', url=url, type=2)
+	api.update_status(u'片思われリストを作成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	return render_template('finish.html', url=url, user=owner_screen_name, type=2)
 """
 @app.route('/teiki')
 def teikicheck():
@@ -179,7 +193,7 @@ def teikicheck():
 	return render_template('finish.html', type=3)
 """
 """
-@app.route('/mute-teiki')
+@app.route('/teiki-mute')
 def mute_teiki():
 	token = session.get('request_token')
 	verifier = session.get('verifier')

@@ -1,108 +1,160 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1">
-<title>result</title>
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-body{
-	font-weight: lighter;
-	font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
-	animation: fadeIn 2s ease 0s 1 normal;
-    -webkit-animation: fadeIn 2s ease 0s 1 normal;
-}
-@keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-a{
-	text-decoration: none;
-}
-footer{
-	margin: 60px 0 0;
-}
-header{
-	margin: 40px 0 20px;
-}
-.button{
-	font-weight: bolder;
-	display: block;
-	width: 200px;
-	margin: auto;
-	padding: 10px 0 10px;
-	text-align: center;
-	border: 2px solid #ccc;
-	border-color: #eee #ccc #ccc #eee;
-}
-.contents{
-	margin: 40px 0 0;
-	text-align: center;
-}
-</style>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@_mktia">
+	<meta name="twitter:creator" content="@_mktia">
+	<meta name="twitter:title" content="みくつい">
+	<meta name="twitter:description" content="Twitter管理補助アプリ">
+	<meta name="twitter:image" content="">
+	<!-- /Twitter Card -->
+	<title>result</title>
+	<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+		@import url('https://fonts.googleapis.com/css?family=Raleway');
+		a{
+			text-decoration: none;
+		}
+		body{
+			font-weight: lighter;
+			font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
+			background-color: #fafafa;
+			text-align: center;
+		}
+		footer{
+			margin: 40px 0 0;
+		}
+		header{
+			margin: 0 0 20px;
+		}
+		header p{
+			color: #888;
+		}
+		section{
+			background-color: #fff;
+			padding: 5px 80px;
+			margin: 0 0 20px;
+		}
+		.button{
+			font-weight: bolder;
+			display: block;
+			width: 200px;
+			margin: 5px auto 10px;
+			padding: 10px 0 10px;
+			text-align: center;
+			border: 2px solid #ccc;
+			border-color: #eee #ccc #ccc #eee;
+		}
+		.container{
+			display: block;
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.redline{
+			background: linear-gradient(transparent 70%, rgba(255, 0, 102, 0.6) 70%);
+			background: -moz-linear-gradient(transparent 70%, rgba(255, 0, 102, 0.6) 70%);
+			background: -webkit-gradient(linear, transparent 70%, rgba(255, 0, 102, 0.6) 70%);
+			font-weight: normal;
+		}
+		.title{
+			color: #1da1f2;
+		}
+		/*** smartphone ***/
+		@media only screen and (max-device-width : 480px) {
+			p{
+				text-align: left;
+			}
+			header p, footer p{
+				text-align: center;
+			}
+			section{
+				padding: 5px 10px;
+			}
+			.container{
+				display: block;
+				width: initial;
+			}
+		}
+	</style>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-60167522-20', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	  ga('create', 'UA-60167522-20', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-3718490269566520",
+		enable_page_level_ads: true
+	  });
+	</script>
 </head>
 <body>
-	<div class="contents">
+	<div class="container">
 		<header>
 			<h1>実行結果</h1>
 		</header>
-		{% if type == 1 %}
-		<p>片思いしているアカウントをチェックしました.</p>
-		<br>
-		<p>kataomoi リストを作成しました.</p>
-		<p>twitter 上で確認してください.</p>
-		<br>
-		<p style="color: #ff0000;">※次回実行する際は kataomoi リストを消去するか、リスト名を変更してください.</p>
-		<br>
-		<br>
-		<a class="button" href="{{url}}/">TOP に戻る</a>
-		<br>
-		{% elif type == 2 %}
-		<p>片思いされているアカウントをチェックしました.</p>
-		<br>
-		<p>notfollow リストを作成しました.</p>
-		<p>twitter 上で確認してください.</p>
-		<br>
-		<p style="color: #ff0000;">※次回実行する際は notfollow リストを消去するか、リスト名を変更してください.</p>
-		<br>
-		<br>
-		<a class="button" href="{{url}}/">TOP に戻る</a>
-		<br>
-		{% elif type == 3 %}
-		<p>定期ツイートが多いアカウントをチェックしました.</p>
-		<br>
-		<p>teiki リストを作成しました.</p>
-		<p>twitter 上で確認してください.</p>
-		<br>
-		<p style="color: #ff0000;">※次回実行する際は teiki リストを消去するか、リスト名を変更してください.</p>
-		<br>
-		<br>
-		<a class="button" href="{{url}}/">TOP に戻る</a>
-		<br>
-		{% else %}
-		<p>処理に失敗したかもしれません.</p>
-		{% endif %}
+		<section>
+			{% if type == 1 %}
+			<p>片思いしているアカウントをチェックしました。</p>
+			<br>
+			<p>kataomoi リストを作成しました。</p>
+			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
+			<br>
+			<p style="color: #ff0000;">※次回実行する際は kataomoi リストを消去するか、リスト名を変更してください.</p>
+			<br>
+			<br>
+			<a class="button" href="{{url}}/">TOP に戻る</a>
+			<br>
+			{% elif type == 2 %}
+			<p>片思いされているアカウントをチェックしました。</p>
+			<br>
+			<p>notfollow リストを作成しました。</p>
+			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
+			<br>
+			<p style="color: #ff0000;">※次回実行する際は notfollow リストを消去するか、リスト名を変更してください.</p>
+			<br>
+			<br>
+			<a class="button" href="{{url}}/">TOP に戻る</a>
+			<br>
+			{% elif type == 3 %}
+			<p>定期ツイートが多いアカウントをチェックしました。</p>
+			<br>
+			<p>teiki リストを作成しました。</p>
+			<p><a href="http://twitter.com/{{user}}/lists">twitter で確認</a>してください。</p>
+			<br>
+			<p style="color: #ff0000;">※次回実行する際は teiki リストを消去するか、リスト名を変更してください.</p>
+			<br>
+			<br>
+			<a class="button" href="{{url}}/">TOP に戻る</a>
+			<br>
+			{% else %}
+			<p>処理に失敗したかもしれません.</p>
+			{% endif %}
+		</section>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- mktia-twitter -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-3718490269566520"
+			 data-ad-slot="8712904292"
+			 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 		<footer>
 			<p><a href="{{url}}/">TOP</a> | <a href="{{url}}/ver">バージョン情報</a> | Developed by <a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
-			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All Rights Reserved.</p>
+			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All rights reserved.</p>
 		</footer>
 	</div>
 </body>
