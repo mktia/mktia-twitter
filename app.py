@@ -84,8 +84,10 @@ def ffcheck():
 				print(e)
 		else:
 			break
-	
-	api.update_status(u'片思いリストを作成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	try:
+		api.update_status(u'片思いリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	except:
+		api.update_status(u'みくついで片思いリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
 	return render_template('finish.html', url=url, user=owner_screen_name, type=1)
 
 @app.route('/notfollow')
@@ -135,7 +137,10 @@ def notfollow():
 		else:
 			break
 	
-	api.update_status(u'片思われリストを作成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	try:
+		api.update_status(u'片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
+	except:
+		api.update_status(u'みくついで片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
 	return render_template('finish.html', url=url, user=owner_screen_name, type=2)
 """
 @app.route('/teiki')
