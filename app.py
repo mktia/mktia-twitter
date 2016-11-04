@@ -67,6 +67,7 @@ def ffcheck():
 	api.create_list(name='kataomoi', mode='private', description="あなたが片思いしているユーザー一覧です")
 	
 	not_friends = []
+	num = 0
 	cnt = 0
 	
 	for i in range(fr):
@@ -75,6 +76,7 @@ def ffcheck():
 				break
 		else:
 			not_friends.append(friends[i])
+			num += 1
 	for user in not_friends:
 		if cnt < 150:
 			try:
@@ -84,11 +86,7 @@ def ffcheck():
 				print(e)
 		else:
 			break
-	try:
-		api.update_status(u'片思いリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
-	except:
-		api.update_status(u'みくついで片思いリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
-	return render_template('finish.html', url=url, user=owner_screen_name, type=1)
+	return render_template('finish.html', url=url, user=owner_screen_name, num=num, type=1)
 
 @app.route('/notfollow')
 def notfollow():
@@ -119,6 +117,7 @@ def notfollow():
 	api.create_list(name='notfollow', mode='private', description=u"あなたに片思いしているユーザー一覧です")
 	
 	not_follow = []
+	num = 0
 	cnt = 0
 	
 	for fo in followers:
@@ -127,6 +126,7 @@ def notfollow():
 				break
 		else:
 			not_follow.append(fo)
+			num += 1
 	for user in not_follow:
 		if cnt < 150:
 			try:
@@ -141,7 +141,7 @@ def notfollow():
 		api.update_status(u'片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
 	except:
 		api.update_status(u'みくついで片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
-	return render_template('finish.html', url=url, user=owner_screen_name, type=2)
+	return render_template('finish.html', url=url, user=owner_screen_name, num=num, type=2)
 """
 @app.route('/teiki')
 def teikicheck():
