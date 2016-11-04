@@ -14,7 +14,13 @@
 	<meta name="twitter:description" content="Twitter管理補助アプリ">
 	<meta name="twitter:image" content="http://aita.info/wp-content/uploads/2016/10/mktia-twitter-ogp.png">
 	<!-- /Twitter Card -->
+	<!-- OGP -->
+	<meta property="og:title" content="みくつい">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://aita.info/wp-content/uploads/2016/10/mktia-twitter-ogp.png">
+	<!-- /OGP -->
 	<title>menu | みくつい</title>
+	<meta name="description" content="Twitterの片思いしているアカウント、片思いされているアカウントをまとめたリストを自動生成します。">
 	<style>
 		@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 		@import url('https://fonts.googleapis.com/css?family=Raleway');
@@ -22,41 +28,43 @@
 			text-decoration: none;
 		}
 		body{
+			background-color: #f5f5f5;
 			font-weight: 200;
 			font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
-			background-color: #fafafa;
 			text-align: center;
 		}
 		footer{
+			color: #999;
 			margin: 40px 0 0;
 		}
+		footer a{
+			color: #999;
+		}
 		header{
-			margin: 0 0 20px;
-		}
-		header p{
-			color: #888;
-		}
-		ol{
-			padding: 0 20px;
+			background-color: #fff;
+			box-shadow:0px 0px 15px 1px #ddd;
+			-moz-box-shadow:0px 0px 15px 1px #ddd;
+			-webkit-box-shadow:0px 0px 15px 1px #ddd;
+			margin: -16px -8px;
+			padding: 0px;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
 		}
 		section{
 			background-color: #fff;
 			padding: 5px 80px;
 			margin: 0 0 20px;
 		}
-		.box{
-			text-align: left;
-			width: 600px;
-		}
 		.button{
-			font-weight: bolder;
+			border: 2px solid #ccc;
+			border-color: #eee #ccc #ccc #eee;
 			display: block;
-			width: 200px;
+			font-weight: bolder;
 			margin: 5px auto 10px;
 			padding: 10px 0 10px;
 			text-align: center;
-			border: 2px solid #ccc;
-			border-color: #eee #ccc #ccc #eee;
+			width: 200px;
 		}
 		.container{
 			display: block;
@@ -71,23 +79,44 @@
 		}
 		.title{
 			color: #1da1f2;
+			margin: 5px 0;
+		}
+		#top{
+			color: #bbb;
+			padding-top: 40px;
+			text-align: center;
+		}
+		/*** only this file ***/
+		ol{
+			padding: 0 20px;
+		}
+		.box{
+			text-align: left;
+			width: 600px;
 		}
 		/*** smartphone ***/
 		@media only screen and (max-device-width : 480px) {
+			footer p{
+				text-align: center;
+			}
+			h2{
+				background: linear-gradient(transparent 70%, rgba(29, 161, 242, 0.6) 100%);
+				background: -moz-linear-gradient(transparent 70%, rgba(29, 161, 242, 0.6) 100%);
+				background: -webkit-gradient(linear, transparent 70%, rgba(229, 161, 242, 0.6) 100%);
+				font-weight: normal;
+			}
 			p{
 				text-align: left;
-			}
-			header p, footer p{
-				text-align: center;
 			}
 			section{
 				padding: 5px 10px;
 			}
-			.box{
-				width: initial;
-			}
 			.container{
 				display: block;
+				width: initial;
+			}
+			/*** only this file ***/
+			.box{
 				width: initial;
 			}
 		}
@@ -111,13 +140,13 @@
 	</script>
 </head>
 <body>
+	<header>
+		<h1 class="title">MIKUTWI</h1>
+	</header>
+	<p id="top">Twitterアカウント管理補助アプリ</p>
 	<div class="container" align="center">
-		<header>
-			<h1>MENU</h1>
-			<p>機能を選んでください。</p>
-		</header>
 		<section>
-			<h2>機能選択</h2>
+			<h2>MENU</h2>
 			<p>ページ下部の使用上の注意と禁止事項をお読みください。</p>
 			<p>処理を開始した時点で、内容を理解して同意を頂いたものとみなします。</p>
 			<a class="button" href="{{url}}/ffcheck">片思いチェック</a>
@@ -142,7 +171,7 @@
 			<br>
 			<h3>片思われチェック</h3>
 			<p>片思いされているアカウントのリスト notfollow を作成します。</p>
-			<p>※鍵アカウントはチェックの対象外です。</p>
+			<p>※非公開アカウントはチェック対象外です。</p>
 			<br>
 			<p><span style="font-weight: normal;">各機能を利用すると、処理結果を自動でツイートします。</span></p>
 			<p></p>
@@ -152,7 +181,7 @@
 			<div class="box">
 				<ol style="list-style-type: lower-roman;">
 					<li><p>終了画面が出る前に閉じると、プログラムは強制終了します。</p></li>
-					<li><p>一度にリストに追加できるアカウントの数は API 制限により 180 が限界ですが、安全のため 150 に設定しています。</p></li>
+					<li><p>一度にリストに追加できるアカウントの数は API 制限により (15 分当たり) 180 が限界ですが、安全のため 150 に設定しています。</p></li>
 				</ol>
 			</div>
 		</section>

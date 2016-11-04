@@ -14,7 +14,13 @@
 	<meta name="twitter:description" content="Twitter管理補助アプリ">
 	<meta name="twitter:image" content="http://aita.info/wp-content/uploads/2016/10/mktia-twitter-ogp.png">
 	<!-- /Twitter Card -->
+	<!-- OGP -->
+	<meta property="og:title" content="みくつい">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://aita.info/wp-content/uploads/2016/10/mktia-twitter-ogp.png">
+	<!-- /OGP -->
 	<title>みくつい</title>
+	<meta name="description" content="Twitterの片思いしているアカウント、片思いされているアカウントをまとめたリストを自動生成します。">
 	<style>
 		@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 		@import url('https://fonts.googleapis.com/css?family=Raleway');
@@ -22,19 +28,28 @@
 			text-decoration: none;
 		}
 		body{
+			background-color: #f5f5f5;
 			font-weight: 200;
 			font-family: 'Raleway', 'Noto Sans Japanese', sans-serif;
-			background-color: #fafafa;
 			text-align: center;
 		}
 		footer{
+			color: #999;
 			margin: 40px 0 0;
 		}
-		header{
-			margin: 0 0 20px;
+		footer a{
+			color: #999;
 		}
-		header p{
-			color: #888;
+		header{
+			background-color: #fff;
+			box-shadow:0px 0px 15px 1px #ddd;
+			-moz-box-shadow:0px 0px 15px 1px #ddd;
+			-webkit-box-shadow:0px 0px 15px 1px #ddd;
+			margin: -16px -8px;
+			padding: 0px;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
 		}
 		section{
 			background-color: #fff;
@@ -42,14 +57,14 @@
 			margin: 0 0 20px;
 		}
 		.button{
-			font-weight: bolder;
+			border: 2px solid #ccc;
+			border-color: #eee #ccc #ccc #eee;
 			display: block;
-			width: 200px;
+			font-weight: bolder;
 			margin: 5px auto 10px;
 			padding: 10px 0 10px;
 			text-align: center;
-			border: 2px solid #ccc;
-			border-color: #eee #ccc #ccc #eee;
+			width: 200px;
 		}
 		.container{
 			display: block;
@@ -64,14 +79,41 @@
 		}
 		.title{
 			color: #1da1f2;
+			margin: 5px 0;
+		}
+		#top{
+			color: #bbb;
+			padding-top: 40px;
+			text-align: center;
+		}
+		/*** only this file ***/
+		.tweet{
+			//background-color: #1da1f2;
+			border: 1px solid #1da1f2;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			color: #1da1f2;
+			display: block;
+			font-weight: bolder;
+			margin: 5px auto 10px;
+			padding: 10px 0 10px;
+			text-align: center;
+			width: 250px;
 		}
 		/*** smartphone ***/
 		@media only screen and (max-device-width : 480px) {
+			footer p{
+				text-align: center;
+			}
+			h2{
+				background: linear-gradient(transparent 70%, rgba(29, 161, 242, 0.6) 100%);
+				background: -moz-linear-gradient(transparent 70%, rgba(29, 161, 242, 0.6) 100%);
+				background: -webkit-gradient(linear, transparent 70%, rgba(229, 161, 242, 0.6) 100%);
+				font-weight: normal;
+			}
 			p{
 				text-align: left;
-			}
-			header p, footer p{
-				text-align: center;
 			}
 			section{
 				padding: 5px 10px;
@@ -100,16 +142,17 @@
 	</script>
 </head>
 <body>
+	<header>
+		<h1 class="title">MIKUTWI</h1>
+	</header>
+	<p id="top">Twitterアカウント管理補助アプリ</p>
 	<div class="container">
-		<header>
-			<h1 class="title">みくつい</h1>
-			<p>twitter管理補助アプリ</p>
-		</header>
 		<section>
 			<h2>”みくつい”とは？</h2>
 			<p><strong>相互フォローチェック</strong>を自動で行うことで、たくさんのアカウントを管理しなければならないという SNS の呪縛から解放され、幸せになるための Web アプリケーションです。</p>
 			<p>片思いになっているアカウント、片思いされているアカウントをまとめてリストにすることができます。</p>
 			<p>その他の機能については、やる気と時間の余裕次第で追加されるかもしれないし、されないかもしれません。</p>
+			<a class="tweet" href="https://twitter.com/intent/tweet?text=自動相互フォローチェックなら&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">”みくつい”をオススメする</a>
 		</section>
 		<section>
 			<h2>ご利用の前に</h2>
@@ -135,6 +178,10 @@
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
+		<section>
+			<a class="twitter-timeline"  href="https://twitter.com/hashtag/%E3%81%BF%E3%81%8F%E3%81%A4%E3%81%84" data-widget-id="794425834400456705">#みくつい のツイート</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+		</section>
 		<footer>
 			<p><a href="{{url}}/">TOP</a> | <a href="{{url}}/ver">バージョン情報</a> | Developed by <a id= "mktia" href="http://twitter.com/_mktia">@_mktia</a></p>
 			<p>Copyright&copy; <a id= "mktia" href="http://twitter.com/_mktia">mktia</a> All rights reserved.</p>
