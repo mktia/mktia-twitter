@@ -136,11 +136,6 @@ def notfollow():
 				print(e)
 		else:
 			break
-	
-	try:
-		api.update_status(u'片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
-	except:
-		api.update_status(u'みくついで片思われリストを自動生成しました！\n#みくつい\nhttp://mktia-twitter.herokuapp.com')
 	return render_template('finish.html', url=url, user=owner_screen_name, num=num, type=2)
 """
 @app.route('/teiki')
