@@ -57,14 +57,17 @@
 			margin: 0 0 20px;
 		}
 		.button{
-			border: 2px solid #ccc;
-			border-color: #eee #ccc #ccc #eee;
+			border: 1px solid #1da1f2;
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			color: #1da1f2;
 			display: block;
 			font-weight: bolder;
 			margin: 5px auto 10px;
 			padding: 10px 0 10px;
 			text-align: center;
-			width: 200px;
+			width: 250px;
 		}
 		.container{
 			display: block;
@@ -87,20 +90,6 @@
 			text-align: center;
 		}
 		/*** only this file ***/
-		.tweet{
-			//background-color: #1da1f2;
-			border: 1px solid #1da1f2;
-			border-radius: 5px;
-			-moz-border-radius: 5px;
-			-webkit-border-radius: 5px;
-			color: #1da1f2;
-			display: block;
-			font-weight: bolder;
-			margin: 5px auto 10px;
-			padding: 10px 0 10px;
-			text-align: center;
-			width: 200px;
-		}
 		/*** smartphone ***/
 		@media only screen and (max-device-width : 480px) {
 			footer p{
@@ -153,20 +142,20 @@
 			<p>あなたが片思いしているアカウントをチェックしました。</p>
 			<p>kataomoi リストを自動生成しました。</p>
 			{% if num > 0 %}
-			<a class="tweet" href="https://twitter.com/intent/tweet?text=あなたは{{num}}人に片思いしています&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
+			<a class="button" href="https://twitter.com/intent/tweet?text=あなたは{{num}}人に片思いしています&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
 			<br>
 			{% else %}
-			<a class="tweet" href="https://twitter.com/intent/tweet?text=あなたが片思いしている人はいませんでした&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
+			<a class="button" href="https://twitter.com/intent/tweet?text=あなたが片思いしている人はいませんでした&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
 			<br>
 			{% endif %}
 			{% elif type == 2 %}
 			<p>あなたに片思いしているアカウントをチェックしました。</p>
 			<p>notfollow リストを自動生成しました。</p>
 			{% if num > 0 %}
-			<a class="tweet" href="https://twitter.com/intent/tweet?text={{num}}人があなたに片思いしています&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
+			<a class="button" href="https://twitter.com/intent/tweet?text={{num}}人があなたに片思いしています&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
 			<br>
 			{% else %}
-			<a class="tweet" href="https://twitter.com/intent/tweet?text=あなたに片思いしている人はいませんでした&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
+			<a class="button" href="https://twitter.com/intent/tweet?text=あなたに片思いしている人はいませんでした&url=http://mktia-twitter.herokuapp.com&hashtags=みくつい" target="_blank">結果をツイート</a>
 			<br>
 			{% endif %}
 			{% elif type == 3 %}
