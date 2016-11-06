@@ -161,10 +161,14 @@
 			{% elif type == 3 %}
 			<p>定期ツイートが多いアカウントをチェックしました。</p>
 			<p>teiki リストを自動生成しました。</p>
+			{% elif type == 4 %}
+			<p>あなたのアカウント名を空白にしました。</p>
 			{% else %}
-			<p>処理に失敗したかもしれません.</p>
+			<p>処理に失敗したかもしれません。</p>
 			{% endif %}
+			{% if type <= 2 %}
 			<a class="button" href="http://twitter.com/{{user}}/lists">Twitter で確認</a>
+			{% endif %}
 			<a class="button" href="{{url}}/">TOP に戻る</a>
 		</section>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

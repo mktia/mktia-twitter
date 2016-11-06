@@ -137,6 +137,22 @@ def notfollow():
 		else:
 			break
 	return render_template('finish.html', url=url, user=owner_screen_name, num=num, type=2)
+	
+@app.route('/blankname')
+def blank_name():
+	token = session.get('request_token')
+	verifier = session.get('verifier')
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_url)
+	auth.request_token = token
+	auth.get_access_token(verifier)
+	access_token = auth.access_token
+	access_token_secret = auth.access_token_secret
+	auth.set_access_token(access_token, access_token_secret)
+	api = tweepy.API(auth)
+	
+	api.update_profile(name=u'ㅤ')
+	return render_template('finish.html', url=url, user='', num='', type=4)
+	
 """
 @app.route('/teiki')
 def teikicheck():
